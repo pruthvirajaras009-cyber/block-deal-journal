@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block Deal Journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#dashboard"><span class="brand-mark">↗</span><span>block<span>deal</span></span></a>
+        <p class="workspace-label">WORKSPACE</p>
+        <nav>
+          <button class="nav-item active" data-view="dashboard"><span>▦</span> Dashboard</button>
+          <button class="nav-item" data-view="journal"><span>☷</span> Trade Journal <b id="journal-count">8</b></button>
+          <button class="nav-item" data-view="backtest"><span>⌁</span> Backtests</button>
+          <button class="nav-item" data-view="rules"><span>◇</span> Strategy Rules</button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="status"><i></i> Paper engine active</div>
+          <button class="help">? &nbsp; Help & guide</button>
+          <div class="profile"><div class="avatar">A</div><div><strong>Arun's Journal</strong><small>India · NSE</small></div><span>⌄</span></div>
+        </div>
+      </aside>
+
+      <main>
+        <header>
+          <div><p class="eyebrow">WEDNESDAY, SEPTEMBER 10</p><h1 id="page-title">Good morning, Arun <span>✦</span></h1></div>
+          <div class="header-actions"><button class="icon-btn">⌕</button><button class="icon-btn">♧<i class="notification"></i></button><button class="primary" id="new-trade">+ Log paper trade</button></div>
+        </header>
+
+        <section id="dashboard" class="view active-view">
+          <div class="market-strip"><div><span class="pulse"></span><strong>Market closed</strong><small>NSE · Next session Sep 11, 09:15</small></div><div class="nifty"><span>NIFTY 50</span><strong>24,852.15</strong><em>+0.34%</em></div><div class="nifty"><span>INDIA VIX</span><strong>11.82</strong><em class="neutral">−0.18%</em></div><button>View market summary →</button></div>
+          <div class="metrics-grid">
+            <article class="metric"><p>NET PAPER P&amp;L <span class="trend up">↗ 12.4%</span></p><h2 class="positive">₹18,640</h2><small>Across 8 closed trades</small><svg viewBox="0 0 160 45" preserveAspectRatio="none"><path d="M0 38 C18 30 22 35 36 28 S55 17 70 23 S93 32 105 18 S125 12 140 13 S152 5 160 8" /></svg></article>
+            <article class="metric"><p>WIN RATE <span class="trend up">↗ 6.8%</span></p><h2>62.5<span>%</span></h2><small>5 winners · 3 losses</small><div class="progress"><i style="width:62.5%"></i></div></article>
+            <article class="metric"><p>AVERAGE R <span class="trend up">↗ 0.3R</span></p><h2>+1.42<span>R</span></h2><small>Risk-adjusted return</small><div class="r-bar"><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric"><p>OPEN TRADES</p><h2>3</h2><small>₹1,50,000 deployed</small><div class="trade-dots"><i></i><i></i><i></i></div></article>
+          </div>
+          <div class="dashboard-grid">
+            <section class="panel performance"><div class="panel-head"><div><h3>Portfolio performance</h3><p>Paper capital curve · last 30 days</p></div><div class="chart-tabs"><button class="selected">1M</button><button>3M</button><button>ALL</button></div></div><div class="chart-legend"><span><i></i> Account value</span><strong>₹5,18,640</strong></div><div class="chart"><div class="y-axis"><span>₹5.20L</span><span>₹5.10L</span><span>₹5.00L</span><span>₹4.90L</span></div><svg viewBox="0 0 650 205" preserveAspectRatio="none"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#30d293" stop-opacity=".25"/><stop offset="1" stop-color="#30d293" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 180 L0 150 L37 145 L74 158 L111 133 L148 142 L185 121 L222 132 L259 95 L296 108 L333 71 L370 89 L407 66 L444 76 L481 43 L518 55 L555 30 L592 42 L629 13 L650 19 L650 180 Z"/><path class="line" d="M0 150 L37 145 L74 158 L111 133 L148 142 L185 121 L222 132 L259 95 L296 108 L333 71 L370 89 L407 66 L444 76 L481 43 L518 55 L555 30 L592 42 L629 13 L650 19"/></svg><div class="x-axis"><span>Aug 12</span><span>Aug 19</span><span>Aug 26</span><span>Sep 02</span><span>Sep 09</span></div></div></section>
+            <section class="panel score"><div class="panel-head"><div><h3>Today’s block deals</h3><p>Qualifying institutional activity</p></div><button class="text-btn">View all →</button></div><div class="deal"><div class="symbol-icon blue">H</div><div><strong>HDFCBANK</strong><small>₹428 Cr · FII buy</small></div><b>86</b></div><div class="deal"><div class="symbol-icon purple">I</div><div><strong>INFY</strong><small>₹214 Cr · MF buy</small></div><b>74</b></div><div class="deal"><div class="symbol-icon orange">T</div><div><strong>TATAMOTORS</strong><small>₹126 Cr · DII buy</small></div><b>68</b></div><p class="score-note">Scores reflect deal value, buyer quality, liquidity &amp; price position.</p></section>
+          </div>
+          <section class="panel positions"><div class="panel-head"><div><h3>Live positions</h3><p>Automatically monitored paper trades</p></div><button class="text-btn" data-go="journal">Open journal →</button></div><div class="table-wrap"><table><thead><tr><th>SYMBOL</th><th>ENTRY</th><th>CURRENT</th><th>STOP LOSS</th><th>TARGET</th><th>R MULTIPLE</th><th>UNREALIZED P&amp;L</th></tr></thead><tbody id="positions-body"></tbody></table></div></section>
+        </section>
+
+        <section id="journal" class="view"><div class="section-heading"><div><h2>Trade journal</h2><p>A complete, searchable history of every paper trade.</p></div><button class="primary" id="journal-new-trade">+ Log paper trade</button></div><div class="filter-row"><input id="trade-search" placeholder="Search symbol, buyer or setup…"/><select id="trade-status"><option value="all">All statuses</option><option value="Open">Open</option><option value="Closed">Closed</option></select><select id="trade-result"><option value="all">All results</option><option value="Win">Wins</option><option value="Loss">Losses</option></select></div><section class="panel table-panel"><div class="table-wrap"><table><thead><tr><th>SYMBOL / SETUP</th><th>ENTRY DATE</th><th>ENTRY</th><th>SL / TARGET</th><th>STATUS</th><th>NET P&amp;L</th><th>R</th></tr></thead><tbody id="journal-body"></tbody></table></div></section></section>
+
+        <section id="backtest" class="view"><div class="section-heading"><div><h2>Strategy backtests</h2><p>Compare entry and exit rules with no look-ahead bias.</p></div><button class="primary">+ New backtest</button></div><div class="backtest-cards"><article class="panel backtest-card featured"><p class="badge">BEST PERFORMER</p><h3>9:15 Entry · Fixed 2% SL</h3><p>Last 12 months · 84 qualifying deals</p><div class="result"><strong>+24.8<span>R</span></strong><em>+₹1,24,000</em></div><div class="mini-stats"><span>WIN RATE <b>59.5%</b></span><span>PROFIT FACTOR <b>1.84</b></span><span>MAX DD <b>−4.2R</b></span></div></article><article class="panel backtest-card"><p class="badge muted">COMPARISON</p><h3>PDH Breakout · PDL SL</h3><p>Last 12 months · 51 qualifying deals</p><div class="result neutral-result"><strong>+12.1<span>R</span></strong><em>+₹60,500</em></div><div class="mini-stats"><span>WIN RATE <b>52.9%</b></span><span>PROFIT FACTOR <b>1.43</b></span><span>MAX DD <b>−3.6R</b></span></div></article></div><section class="panel matrix"><div class="panel-head"><div><h3>Risk/reward matrix</h3><p>Immediate-entry strategy · fixed 2% stop loss</p></div></div><table><thead><tr><th>RISK : REWARD</th><th>TRADES</th><th>WIN RATE</th><th>TOTAL R</th><th>PROFIT FACTOR</th><th>MAX DRAWDOWN</th></tr></thead><tbody><tr><td>1 : 1</td><td>84</td><td>69.0%</td><td>+19.1R</td><td>1.51</td><td>−5.0R</td></tr><tr><td>1 : 2</td><td>84</td><td>60.7%</td><td>+23.4R</td><td>1.72</td><td>−4.6R</td></tr><tr class="best-row"><td>1 : 3 <span>Recommended</span></td><td>84</td><td>59.5%</td><td>+24.8R</td><td>1.84</td><td>−4.2R</td></tr><tr><td>1 : 4</td><td>84</td><td>46.4%</td><td>+18.7R</td><td>1.59</td><td>−6.3R</td></tr></tbody></table></section></section>
+
+        <section id="rules" class="view"><div class="section-heading"><div><h2>Strategy rulebook</h2><p>Rules used by the paper-trading engine.</p></div><button class="primary">Edit rules</button></div><div class="rules-grid"><article class="panel rule"><span>01</span><h3>Deal filters</h3><p>Institutional BUY block deals only. Market cap above ₹10,000 Cr and stock price ₹300–₹2,000.</p></article><article class="panel rule"><span>02</span><h3>Entry</h3><p>Enter at the next day’s opening price if gap-up is no more than 1%. Track PDH breakout as a comparison strategy.</p></article><article class="panel rule"><span>03</span><h3>Risk management</h3><p>₹50,000 allocation per trade. Test fixed, block-deal, PDL and swing-low stop methods. Default R:R: 1:3.</p></article><article class="panel rule"><span>04</span><h3>Exit</h3><p>Exit at stop, target, or at market after 30 trading days. Use intraday sequence for same-day SL/target events.</p></article></div></section>
+      </main>
+    </div>
+    <dialog id="trade-dialog"><form method="dialog"><button class="dialog-close" value="cancel">×</button><p class="eyebrow">NEW PAPER TRADE</p><h2>Log a trade</h2><p class="dialog-copy">Use this to record a discretionary paper trade. The engine will eventually create these automatically.</p><div class="form-grid"><label>Symbol<input id="form-symbol" required placeholder="e.g. INFY" /></label><label>Entry price<input id="form-entry" required type="number" step=".01" placeholder="1500" /></label><label>Stop loss<input id="form-sl" required type="number" step=".01" placeholder="1470" /></label><label>Risk : reward<select id="form-rr"><option value="3">1 : 3</option><option value="2">1 : 2</option><option value="4">1 : 4</option></select></label></div><div class="calc-preview">Target price <strong id="target-preview">—</strong></div><button class="primary full" id="save-trade" value="default">Save paper trade</button></form></dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
+
